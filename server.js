@@ -44,12 +44,12 @@ app.get('/location', (request,response) => {
 
 //Weather Route
 app.get('/weather', (request,response) => {
-  //try {
+  try {
     const darkskyData = require('./data/darksky.json');
     const weather = request.query.data;
     //const weatherData = new Weather(time,forecast); 
     response.send(darkskyData);
-  //}
+  }
   catch(error) {
     errorHandler('So sorry, something went wrong with our weather function.', request, response);
   }
