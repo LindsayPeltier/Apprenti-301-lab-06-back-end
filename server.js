@@ -6,19 +6,17 @@ require('dotenv').config();
 // Application Dependencies
 const express = require('express');
 const cors = require('cors');
-const superAgent = require('superagent');
+// const superAgent = require('superagent');
 
 // Application Setup
 const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(cors());
-app.use(express.static('./front-end'));
 // app.use(superAgent());  // Is this required?
 
 app.get('/', (request,response) => {
   response.send('Home Page!');
 });
-
 
 
 app.get('/bad', (request,response) => {
@@ -59,7 +57,7 @@ function Location(city, geoData) {
 
 
 
-function  notFoundHandler(request,response) {
+function notFoundHandler(request,response) {
   response.status(404).send('huh?');
 }
 
