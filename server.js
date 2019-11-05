@@ -47,7 +47,7 @@ app.get('/weather', (request,response) => {
   try {
     const darkskyData = require('./data/darksky.json');
     const weather = request.query.data;
-    //const weatherData = new Weather(time,forecast); 
+    //const weatherData = new Weather(time,forecast);
     response.send(darkskyData);
   }
   catch(error) {
