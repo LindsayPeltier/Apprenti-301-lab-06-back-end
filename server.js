@@ -18,7 +18,6 @@ app.get('/', (request,response) => {
   response.send('Home Page!');
 });
 
-
 app.get('/bad', (request,response) => {
   throw new Error('Page not found');
 });
@@ -43,14 +42,14 @@ app.get('/location', (request,response) => {
   }
 });
 
-//weather route
+//Weather Route
 app.get('/weather', (request,response) => {
-  try {
+  //try {
     const darkskyData = require('./data/darksky.json');
     const weather = request.query.data;
-    const weatherData = new Weather(latitude,longitude); 
-    response.send(weatherData);
-  }
+    //const weatherData = new Weather(time,forecast); 
+    response.send(darkskyData);
+  //}
   catch(error) {
     errorHandler('So sorry, something went wrong with our weather function.', request, response);
   }
@@ -61,6 +60,7 @@ app.use(errorHandler);
 
 // HELPER FUNCTIONS
 
+//Location Function
 function Location(city, geoData) {
   this.search_query = city;
   this.formatted_query = geoData.results[0].formatted_address;
@@ -68,13 +68,10 @@ function Location(city, geoData) {
   this.longitude = geoData.results[0].geometry.location.lng;
 }
 
-//Weather function
-function Weather(latitude, longitude) {
-  this.search_query = weather;
-  this.formatted_query = darkskyData.results[0].daily.summary;
+//Weather Function
+function Weather(time,forecast ) {
   this.time = darkskyData.results[0].time; //reformat time
-  this.latitude = darkskyData.results[0].location.lat;
-  this.longitude = darkskyData.results[0].location.lng;
+  this.forecast = darkskyData.results[0];
 }
 
 function notFoundHandler(request,response) {
