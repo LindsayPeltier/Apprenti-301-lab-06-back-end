@@ -46,6 +46,7 @@ app.get('/weather', handleWeather);
 // });
 
 //Weather Route
+
 function handleWeather(request,response) {
 //   try {
 //     const darkskyData = require('./data/darksky.json');
@@ -71,6 +72,18 @@ superagent.get(url)
   .catch( ()=> {
     errorHandler('So sorry, something went really wrong', request, response);
   });
+
+app.get('/weather', (request,response) => {
+  try {
+    const darkskyData = require('./data/darksky.json');
+    const weather = request.query.data;
+    //const weatherData = new Weather(time,forecast);
+    response.send(darkskyData);
+  }
+  catch(error) {
+    errorHandler('So sorry, something went wrong with our weather function.', request, response);
+  }
+});
 
 app.use('*', notFoundHandler);
 app.use(errorHandler);
