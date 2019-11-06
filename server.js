@@ -6,7 +6,7 @@ require('dotenv').config();
 // Application Dependencies
 const express = require('express');
 const cors = require('cors');
-const superAgent = require('superagent');
+const superagent = require('superagent');
 
 // Application Setup
 const PORT = process.env.PORT || 3000;

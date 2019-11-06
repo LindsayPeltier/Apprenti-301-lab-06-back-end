@@ -2,6 +2,7 @@
 Apprenti-301
 
 **Author**: Lindsay Peltier and Mark Swearingen (Tuesday, November 5th, 2019)
+Trevor and Mark Swearingen (Wednesday, November 6th, 2019)
 
 **Version**: 
 1.0.0 (Initial Scaffolding on Master)
@@ -58,11 +59,11 @@ Number and name of feature: Weather
 
 Estimate of time needed to complete: 60 minutes
 
-Start time: _____
+Start time: _11:00pm____
 
-Finish time: _____
+Finish time: _12:00____
 
-Actual time needed to complete: _____
+Actual time needed to complete: ___60 minutes__
 
 ****
 
@@ -70,8 +71,33 @@ Number and name of feature: Errors
 
 Estimate of time needed to complete: 45 minutes
 
-Start time: _____
+Start time: _12:00____
 
-Finish time: _____
+Finish time: _1:15____
 
-Actual time needed to complete: _____
+Actual time needed to complete: __75 minutes___
+
+
+**** Lab 07 Features
+
+Number and name of feature: Data Formating
+
+Estimate of time needed to complete: 45 minutes
+
+Start time: __8:00pm___
+
+Finish time: __8:45pm___
+
+Actual time needed to complete: __45 minutes___
+
+
+Number and name of feature: Enable Location
+
+Estimate of time needed to complete: 45 minutes
+
+Start time: __8:45pm___
+
+Finish time: __9:00pm___
+
+Actual time needed to complete: __15 minutes___
+
