@@ -1,4 +1,3 @@
-//repeat commit for github issues 
 'use strict';
 
 // Load Environment Variables from the .env file
